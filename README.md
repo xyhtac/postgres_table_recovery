@@ -35,7 +35,16 @@ do
 done
 ```
 
-## Large table automated search
+## Large table automated fix
+
+For large databases (10GB+) simple search script will have to run millions of databse transactions, this may take days or even months in some cases.
+To speed up this process we may use binary search and reduce the amount of transactions dramatically. 
+
+This script levereges binary search algorithm to create a queue of select transactions, gets offsets of corrupted fields and writes 0 to these fields to recover the database. 
+
+To enable repair functionality, set $write = 1;
+
+WARNING: during the database recovery precess contents of corrupted fields will be lost.
 
 
 
