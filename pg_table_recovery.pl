@@ -1,17 +1,17 @@
 #!/usr/bin/perl -w
 use DBI;
 
-$dbname = "dbname";						# Database name
+$dbname = "dbname";					# Database name
 $username = "dbuser";					# DB username
 $password = "dbpassword";				# DB password
 $dbhost = "localhost";					# DB hostname
-$dbport = "5432";						# DB Port
-$dboptions = "-e";						# DBI options
-$dbtty = "ansi";						# DB Charset
+$dbport = "5432";					# DB Port
+$dboptions = "-e";					# DBI options
+$dbtty = "ansi";					# DB Charset
 
-$table = "tablename_2018_10_01";		# Working table
-$write = 0; 							# Passive mode switch
-$verbose = 0;							# Output verbosity mode
+$table = "tablename_2018_10_01";			# Working table
+$write = 0; 						# Passive mode switch
+$verbose = 0;						# Output verbosity mode
 
 
 $qu = 0;
