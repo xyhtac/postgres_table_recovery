@@ -49,7 +49,7 @@ WARNING: during the database recovery precess contents of corrupted fields will 
 
 ## Prerequisites
 
-Script needs Perl::DBI library.
+PostgreSQL recovery tool needs a Perl::DBI library in order to run.
 
 install on Debian/Ubuntu:
 
