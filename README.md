@@ -47,4 +47,19 @@ To enable repair functionality, set $write = 1;
 WARNING: during the database recovery precess contents of corrupted fields will be lost!
 
 
+## Prerequisites
+
+Script needs Perl::DBI library.
+
+install on Debian/Ubuntu:
+
+```
+> sudo apt-get install libdbi-perl
+```
+
+install on RedHat/CentOS
+```
+> sudo yum -y install perl-DBI
+```
+
 
