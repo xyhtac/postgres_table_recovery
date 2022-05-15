@@ -3,7 +3,7 @@ Tool for quick search and fix of corrupted fields in large PostgreSQL tables.
 
 ## Problem: missing chunk number 0 for toast value
 
-You may get this message upon PostgreSQL startup:
+You may get this message upon PostgreSQL startup or as a result of transaction:
 
 ```
 ERROR: missing chunk number 0 for toast value 734921 in pg_toast_83651
@@ -37,14 +37,14 @@ done
 
 ## Large table automated fix
 
-For large databases (10GB+) simple search script will have to run millions of databse transactions, this may take days or even months in some cases.
+For large databases (10GB+) simple search script will have to run millions of databse transactions which may take days or even months in some cases.
 To speed up this process we may use binary search and reduce the amount of transactions dramatically. 
 
-This script levereges binary search algorithm to create a queue of select transactions, gets offsets of corrupted fields and writes 0 to these fields to recover the database. 
+This script leverages binary search algorithm to create a queue of select transactions, gets offsets of corrupted fields and writes 0 to these fields to recover the database structure. 
 
-To enable repair functionality, set $write = 1;
+By default script runs in diagnostic mode. To enable repair functionality, set $write = 1;
 
-WARNING: during the database recovery precess contents of corrupted fields will be permanently destroyed!!!
+WARNING: During the database recovery precess contents of corrupted fields will be permanently destroyed!!!
 
 
 ## Prerequisites
