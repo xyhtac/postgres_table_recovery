@@ -44,7 +44,7 @@ This script levereges binary search algorithm to create a queue of select transa
 
 To enable repair functionality, set $write = 1;
 
-WARNING: during the database recovery precess contents of corrupted fields will be lost!
+WARNING: during the database recovery precess contents of corrupted fields will be permanently destroyed!!!
 
 
 ## Prerequisites
