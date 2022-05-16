@@ -1,5 +1,5 @@
 # postgres_table_recovery
-Tool for quick search and fix of corrupted fields in large PostgreSQL tables.
+Tool for quick search and fix of corrupted fields in large PostgreSQL tables (ERROR: Missing chunk 0 for toast value in pg_toast).
 
 ## Problem: missing chunk number 0 for toast value
 
