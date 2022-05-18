@@ -37,7 +37,7 @@ foreach $ofst (keys %offsets) {
 				$result = &update_dbi($table,$field,$ident);
 				print $result;
 			} else {
-				print "Passive mode, skipped.\n";
+				print "Diagnostic mode, 0 bytes written.\n";
 			}
 		} else {
 			
