@@ -9,7 +9,7 @@ $dbport = "5432";					# DB Port
 $dboptions = "-e";					# DBI options
 $dbtty = "ansi";					# DB Charset
 
-$table = "tablename_2018_10_01";			# Working table
+$table = "tablename";					# Working table
 $write = 0; 						# Passive mode switch
 $verbose = 0;						# Output verbosity mode
 
