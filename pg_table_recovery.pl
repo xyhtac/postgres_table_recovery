@@ -25,7 +25,7 @@ $dbh = DBI->connect("dbi:Pg:dbname=$dbname;host=$dbhost;port=$dbport;options=$db
 $timespan = time() - $timestamp_start;
 $count = keys %offsets;
 
-print "\nSCAN COMPLETE IN $timespan S\nfound $count corrupted rows. $qu database queries performed. \n\n" if $verbose;;
+print "\nSCAN COMPLETE IN $timespan S\nfound $count corrupted rows. $qu database queries performed. \n\n";
 
 foreach $ofst (keys %offsets) {
 	print "$offsets{$ofst} \n" if $verbose;
