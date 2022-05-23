@@ -3,7 +3,7 @@ use DBI;
 
 $dbname = "dbname";					# Database name
 $username = "dbuser";					# DB username
-$password = "dbpassword";				# DB password
+$password = "secretpassword";				# DB password
 $dbhost = "localhost";					# DB hostname
 $dbport = "5432";					# DB Port
 $dboptions = "-e";					# DBI options
