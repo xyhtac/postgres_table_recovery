@@ -11,7 +11,7 @@ $dbtty = "ansi";					# DB Charset
 
 $table = "tablename";					# Working table
 $write = 0; 						# Passive mode switch
-$verbose = 0;						# Output verbosity mode
+$verbose = 0;						# Output additional diagnostic data
 
 
 $qu = 0;
