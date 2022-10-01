@@ -10,6 +10,7 @@ $dboptions = "-e";					# DBI options
 $dbtty = "ansi";					# DB Charset
 
 $table = "tablename";					# Working table
+$tableid = "id";					# Working table ID field name
 $write = 0; 						# Passive mode switch
 $verbose = 0;						# Output additional diagnostic data
 
@@ -98,7 +99,7 @@ sub query_dbi {
 	local ($table,$limit,$offset,$field) = @_ if @_;
 	$qu++;
 	local $field = "*" unless $field;
-	local $query = "SELECT $field FROM $table ORDER BY ID LIMIT $limit OFFSET $offset";
+	local $query = "SELECT $field FROM $table ORDER BY $tableid LIMIT $limit OFFSET $offset";
 	local $sth = $dbh->prepare($query);
 	local $rv = $sth->execute();
 	if (!defined $rv) {
@@ -136,7 +137,7 @@ sub get_row_id {
 	local ($table,$offset) = @_ if @_;
 	$qu++;
 	local @ids;
-	local $query = "SELECT id FROM $table ORDER BY ID LIMIT 1 OFFSET $offset";
+	local $query = "SELECT $tableid FROM $table ORDER BY $tableid LIMIT 1 OFFSET $offset";
 	$sth = $dbh->prepare($query);
 	$rv = $sth->execute();
 	while (@rws = $sth->fetchrow_array()) {;
@@ -148,7 +149,7 @@ sub get_row_id {
 sub update_dbi {
 	local ($table,$field,$ident) = @_ if @_;
 	$qu++;
-	local $query = "UPDATE $table SET $field = '' WHERE id = $ident";
+	local $query = "UPDATE $table SET $field = '' WHERE $tableid = $ident";
 	$dbh->begin_work();
 	$rv = $dbh->do($query);
 	$dbh->commit();
