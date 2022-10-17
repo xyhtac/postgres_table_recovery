@@ -44,7 +44,7 @@ This script leverages binary search algorithm to create a queue of select transa
 
 By default script runs in diagnostic mode. To enable repair functionality, set $write = 1;
 
-WARNING: During the database recovery precess contents of corrupted fields will be permanently destroyed!!!
+WARNING: During the database recovery process contents of corrupted fields will be permanently destroyed!!!
 
 
 ## Prerequisites
