@@ -38,7 +38,7 @@ done
 ## Large table automated fix
 
 For large databases (10GB+) simple search script will have to run millions of databse transactions which may take days or even months in some cases.
-To speed up this process we may use binary search and reduce the amount of transactions dramatically. 
+To speed up this process we may use [binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) and reduce the amount of transactions dramatically. 
 
 This script leverages binary search algorithm to create a queue of select transactions, gets offsets of corrupted fields and writes 0 to these fields to recover the database structure. 
 
