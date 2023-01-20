@@ -99,7 +99,7 @@ sub query_dbi {
 	local ($table,$limit,$offset,$field) = @_ if @_;
 	$qu++;
 	local $field = "*" unless $field;
-	local $query = "SELECT $field FROM $table ORDER BY $tableid LIMIT $limit OFFSET $offset";
+	local $query = "SELECT COUNT($field) FROM $table ORDER BY $tableid LIMIT $limit OFFSET $offset";
 	local $sth = $dbh->prepare($query);
 	local $rv = $sth->execute();
 	if (!defined $rv) {
